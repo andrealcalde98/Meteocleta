@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MeteoCleta</string>
+    <string name="etEmail">Enter your Email</string>
+    <string name="etPassword">Enter your password</string>
 </resources>
