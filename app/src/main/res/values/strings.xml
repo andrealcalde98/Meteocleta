@@ -2,4 +2,10 @@
     <string name="app_name">MeteoCleta</string>
     <string name="etEmail">Enter your Email</string>
     <string name="etPassword">Enter your password</string>
+    <string name="btnLogin">Log In</string>
+    <string name="btnSignup">Sign Up</string>
+    <string name="etName">Enter your name</string>
+    <string name="etSurname">Enter your surname</string>
+    <string name="etRol">Write your rol Student/Employee</string>
+    <string name="etDate">Choose your birth date</string>
 </resources>
