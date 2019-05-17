@@ -77,7 +77,7 @@
         android:id="@+id/imageView"
         android:layout_width="308dp"
         android:layout_height="297dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
