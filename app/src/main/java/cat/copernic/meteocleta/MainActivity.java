@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     Button btnLogin, btnSignup;
     EditText etEmail, etPassword;
+    TextView txtforgot;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +32,23 @@ public class MainActivity extends AppCompatActivity {
         btnSignup = findViewById(R.id.btnSignup);
         etEmail = findViewById(R.id.etEnterEmail);
         etPassword = findViewById(R.id.etPassword);
+        txtforgot = findViewById(R.id.txt_forgot);
         mAuth = FirebaseAuth.getInstance();
 
+
+        txtforgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RecoveryActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 conectaUsuario(etEmail.getText().toString(), etPassword.getText().toString());
+
             }
         });
         btnSignup.setOnClickListener(new View.OnClickListener() {
@@ -74,16 +86,18 @@ public class MainActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
 
                             Log.d(TAG, "signInWithEmail:success");
-                            Toast.makeText(MainActivity.this, "LogIn successfull.",
+                            Toast.makeText(MainActivity.this, "Login successfull.",
                                     Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
+                            Intent intent = new Intent(getApplicationContext(), ClimaActivity.class);
+                            startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
 
 
-                            Toast.makeText(MainActivity.this, "LogIn failed.",
+                            Toast.makeText(MainActivity.this, "Login failed.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecoveryActivity"></activity>
+        <activity
+            android:name=".ClimaActivity"
+            android:label="@string/title_activity_clima"></activity>
+        <activity android:name=".RecoveryActivity" />
         <activity android:name=".activitySignUp" />
         <activity android:name=".MainActivity">
             <intent-filter>
