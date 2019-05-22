@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "447928479805",
+    "firebase_url": "https://meteocleta.firebaseio.com",
+    "project_id": "meteocleta",
+    "storage_bucket": "meteocleta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447928479805:android:1a47bd34b99640a8",
+        "android_client_info": {
+          "package_name": "cat.copernic.meteocleta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447928479805-crfhrn9svu2vc4914atmiu74qafo1bda.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cat.copernic.meteocleta",
+            "certificate_hash": "5530b4609a0d01485d71bd979ddca0dc39995d74"
+          }
+        },
+        {
+          "client_id": "447928479805-f900mdu7tv1l6hel85bl1n06gdhbdgev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_KYLppeYsPZ5tg8nHQWD065wWP-XVL_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447928479805-f900mdu7tv1l6hel85bl1n06gdhbdgev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
