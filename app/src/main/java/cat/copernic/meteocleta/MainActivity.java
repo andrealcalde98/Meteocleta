@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
+
     String TAG = "Meteocleta_login";
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
