@@ -1,35 +1,38 @@
 package cat.copernic.meteocleta;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 public class ClimaActivity extends AppCompatActivity {
-    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.navigation_clima:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
+                    fragment = new HomeFragment();
+                    break;
                 case R.id.navigation_grafica:
-                    mTextMessage.setText(R.string.grafica);
-                    return true;
+                    fragment = new GraficaFragment();
+                    break;
                 case R.id.navigation_perfil:
-                    mTextMessage.setText(R.string.profile);
-                    return true;
+                    fragment = new PerfilFragment();
+                    break;
                 case R.id.navigation_ajustes:
-                    mTextMessage.setText(R.string.settings);
-                    return true;
+                    fragment = new AjustesFragment();
+                    break;
             }
-            return false;
+            return loadFragment(fragment);
         }
     };
 
@@ -37,9 +40,22 @@ public class ClimaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clima);
+        //loading the default fragment
+        loadFragment(new HomeFragment());
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    private boolean loadFragment(Fragment fragment) {
+        //switching fragment
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
     }
 
 }
