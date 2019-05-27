@@ -40,8 +40,14 @@ public class MainActivity extends AppCompatActivity {
         txtforgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RecoveryActivity.class);
-                startActivity(intent);
+                if(etEmail.toString().isEmpty() && etPassword.getText().toString().isEmpty()){
+                    Toast.makeText(MainActivity.this,
+                                    "Missing field",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(getApplicationContext(), RecoveryActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
