@@ -7,7 +7,7 @@
     <string name="etName">Enter your name</string>
     <string name="etSurname">Enter your surname</string>
     <string name="etRol">Write your rol Student/Employee</string>
-    <string name="etDate">Click to choose your birth date</string>
+    <string name="etDate">Click to choose your birthdate</string>
     <string name="reset_description">We send you an email to reset yor password</string>
     <string name="send">Send</string>
     <string name="forgot">Forgot your password?</string>

@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     String TAG = "Meteocleta_login";
     private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
     Button btnLogin, btnSignup;
     EditText etEmail, etPassword;
     TextView txtforgot;
@@ -40,21 +39,24 @@ public class MainActivity extends AppCompatActivity {
         txtforgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(etEmail.toString().isEmpty() && etPassword.getText().toString().isEmpty()){
-                    Toast.makeText(MainActivity.this,
-                                    "Missing field",
-                            Toast.LENGTH_SHORT).show();
-                } else {
+
                     Intent intent = new Intent(getApplicationContext(), RecoveryActivity.class);
                     startActivity(intent);
-                }
+
             }
         });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                conectaUsuario(etEmail.getText().toString(), etPassword.getText().toString());
+                if(etEmail.toString().isEmpty() && etPassword.getText().toString().isEmpty()){
+                    Toast.makeText(MainActivity.this,
+                            "Missing field",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    conectaUsuario(etEmail.getText().toString(), etPassword.getText().toString());
+                }
+
 
             }
         });
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
+        FirebaseAuth.AuthStateListener mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
