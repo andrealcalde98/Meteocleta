@@ -8,7 +8,7 @@
     <string name="etSurname">Enter your surname</string>
     <string name="etRol">Write your rol Student/Employee</string>
     <string name="etDate">Click to choose your birthdate</string>
-    <string name="reset_description">We send you an email to reset yor password</string>
+    <string name="reset_description">To reset password, enter your email, press the button and check mail to follow instruction.</string>
     <string name="send">Send</string>
     <string name="forgot">Forgot your password?</string>
     <string name="title_activity_clima">MeteoCleta</string>
