@@ -45,7 +45,7 @@ public class activitySignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        btnSignupRegistro = findViewById(R.id.btnSignupRegistro);
+        btnSignupRegistro = findViewById(R.id.btn_change);
         etName = findViewById(R.id.etName);
         etPassword = findViewById(R.id.etEnterPassword);
         etSurname = findViewById(R.id.etSurname);

@@ -1,5 +1,6 @@
 package cat.copernic.meteocleta;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnLogin, btnSignup;
     EditText etEmail, etPassword;
     TextView txtforgot;
+    ProgressDialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEnterEmail);
         etPassword = findViewById(R.id.etPassword);
         txtforgot = findViewById(R.id.txt_forgot);
+        dialog = new ProgressDialog(getApplicationContext());
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -49,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(etEmail.toString().isEmpty() && etPassword.getText().toString().isEmpty()){
+                if(etEmail.toString().isEmpty() || etPassword.getText().toString().isEmpty()){
                     Toast.makeText(MainActivity.this,
-                            "Missing field",
+                            "Missing fields",
                             Toast.LENGTH_SHORT).show();
                 } else {
                     conectaUsuario(etEmail.getText().toString(), etPassword.getText().toString());

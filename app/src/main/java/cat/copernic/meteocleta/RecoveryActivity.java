@@ -1,5 +1,6 @@
 package cat.copernic.meteocleta;
 
+import android.app.ProgressDialog;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,13 +21,14 @@ public class RecoveryActivity extends AppCompatActivity {
     EditText EmailReset;
     Button Send;
     private FirebaseAuth mAuth;
+    ProgressDialog dialog;
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recovery);
         EmailReset = findViewById(R.id.et_EmailReset);
         Send = findViewById(R.id.btn_Reset);
-
+        dialog = new ProgressDialog(getApplicationContext());
 
         Send.setOnClickListener(new View.OnClickListener() {
             @Override
