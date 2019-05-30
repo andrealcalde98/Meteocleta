@@ -84,7 +84,6 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback{
             toast1.show();
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
-
             // here to request the missing permissions, and then overriding
             //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
             //                                          int[] grantResults)
