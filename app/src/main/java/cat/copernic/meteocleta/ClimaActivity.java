@@ -27,7 +27,7 @@ public class ClimaActivity extends AppCompatActivity implements BottomNavigation
                 case R.id.navigation_clima:
                     fragment = new HomeFragment();
                     break;
-                case R.id.navigation_grafica:
+                case R.id.navigation_maps:
                     fragment = new MapsFragment();
                     break;
                 case R.id.navigation_perfil:
