@@ -16,7 +16,12 @@
     <string name="maps">Maps</string>
     <string name="profile">Profile</string>
     <string name="settings">Settings</string>
+    <string name="new_pass">Enter your new password(optional)</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update_profile">Update profile</string>
+    <string name="route_map_to_college">Route map to college, tap mark to create route!</string>
+    <string name="convert_temperature_from_celsius_to_fahrenheit">Convert temperature from Cº to Fahrenheit</string>
+    <string name="change_velocity">Convert velocity of wind from m/s to km/h</string>
 </resources>

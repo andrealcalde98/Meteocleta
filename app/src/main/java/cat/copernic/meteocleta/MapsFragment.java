@@ -106,7 +106,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback{
         LatLng punto1 = new LatLng(41.5699950, 1.9963366);
         nMap.addMarker(new MarkerOptions().position(punto1).title("Nicolau Copernic")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
-        CameraPosition cole = CameraPosition.builder().target(punto1).zoom(10).bearing(0).tilt(45).build();
+        CameraPosition cole = CameraPosition.builder().target(punto1).zoom(13).bearing(0).tilt(45).build();
         nMap.moveCamera(CameraUpdateFactory.newCameraPosition(cole));
     }
 

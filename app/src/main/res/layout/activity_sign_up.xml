@@ -138,6 +138,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDate"
+        android:background="@drawable/redondeado"
         />
 
 </android.support.constraint.ConstraintLayout>

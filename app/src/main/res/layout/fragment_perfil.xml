@@ -18,7 +18,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="24dp"
         android:ems="10"
-        android:hint="Enter your new password (optional)"
+        android:hint="@string/new_pass"
         android:inputType="textPassword"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/etDate"
@@ -107,6 +107,7 @@
 
     <Button
         android:id="@+id/btn_change"
+        android:background="@drawable/redondeado"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -115,7 +116,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="64dp"
-        android:text="Update profile"
+        android:text="@string/update_profile"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
