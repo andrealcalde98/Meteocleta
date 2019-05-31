@@ -13,14 +13,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="65dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/redondeado"
-        android:text="Change lenguage"
+        android:text="@string/change_lenguage"
+        app:layout_constraintBottom_toTopOf="@+id/btn_privacidad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_ajustes" />
+        app:layout_constraintTop_toBottomOf="@+id/velocidad" />
 
     <Button
         android:id="@+id/btn_privacidad"
@@ -28,11 +29,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/redondeado"
-        android:text="Privacy Policy"
+        android:text="@string/privacy_policy"
+        app:layout_constraintBottom_toTopOf="@+id/btn_desconecta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_idioma" />
@@ -51,54 +53,70 @@
     <Switch
         android:id="@+id/velocidad"
         android:layout_width="0dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="52dp"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_temperatura"
+        app:layout_constraintBottom_toTopOf="@+id/btn_idioma"
         app:layout_constraintEnd_toStartOf="@+id/tv_temperatura"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_temperatura" />
+        app:layout_constraintTop_toBottomOf="@+id/temperatura" />
 
     <Switch
         android:id="@+id/temperatura"
         android:layout_width="0dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="146dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="23dp"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_velocidad"
+        app:layout_constraintBottom_toTopOf="@+id/velocidad"
         app:layout_constraintEnd_toStartOf="@+id/tv_velocidad"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_velocidad"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_velocidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:text="@string/convert_temperature_from_celsius_to_fahrenheit"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/temperatura"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/temperatura"
-        app:layout_constraintTop_toBottomOf="@+id/btn_privacidad" />
+        app:layout_constraintStart_toEndOf="@+id/temperatura" />
 
     <TextView
         android:id="@+id/tv_temperatura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginRight="37dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:text="@string/change_velocity"
+        app:layout_constraintBottom_toBottomOf="@+id/velocidad"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/velocidad"
-        app:layout_constraintTop_toBottomOf="@+id/tv_velocidad" />
+        app:layout_constraintStart_toEndOf="@+id/velocidad" />
+
+    <Button
+        android:id="@+id/btn_desconecta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="216dp"
+        android:background="@drawable/redondeado"
+        android:text="@string/log_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_privacidad" />
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,5 @@
 package cat.copernic.meteocleta;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,8 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class AjustesFragment extends Fragment {
-    Button privacidad;
+    Button privacidad, desconecta;
+    private FirebaseAuth mAuth;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -32,6 +34,16 @@ public class AjustesFragment extends Fragment {
             public void onClick(View v) {
                 Uri uri = Uri.parse("http://rehabilitat.cat/blog/privacypolicymeteocleta");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+        desconecta = view.findViewById(R.id.btn_desconecta);
+        mAuth = FirebaseAuth.getInstance();
+        desconecta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
             }
         });
