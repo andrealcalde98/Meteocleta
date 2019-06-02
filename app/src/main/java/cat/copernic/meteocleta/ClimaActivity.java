@@ -1,13 +1,14 @@
 package cat.copernic.meteocleta;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.annotation.NonNull;
 import android.view.MenuItem;
 
 public class ClimaActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +17,9 @@ public class ClimaActivity extends AppCompatActivity implements BottomNavigation
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         //loading the default fragment
         loadFragment(new HomeFragment());
+
     }
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
