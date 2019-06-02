@@ -22,8 +22,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="update_profile">Update profile</string>
     <string name="route_map_to_college">Route map to college, tap mark to create route!</string>
-    <string name="convert_temperature_from_celsius_to_fahrenheit">Convert temperature from Cº to Fahrenheit</string>
-    <string name="change_velocity">Convert velocity of wind from m/s to km/h</string>
+    <string name="convert_temperature_from_celsius_to_fahrenheit">Convert temperature from Cº to Fahrenheit             </string>
+    <string name="change_velocity">Convert velocity of wind from m/s to km/h            </string>
     <string name="log_out">Log Out</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="change_lenguage">Change lenguage</string>
