@@ -37,11 +37,11 @@ public class HomeFragment extends Fragment {
     }
     public List<clima> obtenerClima(){
         List<clima> datos = new ArrayList<>();
-        datos.add(new clima("28º",R.drawable.clima_nuves));
-        datos.add(new clima("60%",R.drawable.clima_nuves));
-        datos.add(new clima("1000",R.drawable.clima_nuves));
-        datos.add(new clima("poca",R.drawable.clima_nuves));
-        datos.add(new clima("50km/h",R.drawable.clima_nuves));
+        datos.add(new clima("   28 Cº",R.drawable.temperatura));
+        datos.add(new clima("   60 %",R.drawable.humedad));
+        datos.add(new clima(" 1000 pa",R.drawable.clima_nuves));
+        datos.add(new clima(" drizzle",R.drawable.lluvia));
+        datos.add(new clima("50km/h",R.drawable.viento));
 
 
 
