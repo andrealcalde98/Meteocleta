@@ -3,6 +3,7 @@ package cat.copernic.meteocleta;
 public class clima {
     private float temperatura, velocitatVent, pressioAtmosferica, humitat;
     private String pluja;
+
     public clima() {
         this.temperatura = temperatura;
         this.velocitatVent = velocitatVent;
