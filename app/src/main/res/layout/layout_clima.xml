@@ -14,13 +14,6 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imgClima"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/clima_nuves" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -29,11 +22,62 @@
 
                 <TextView
                     android:id="@+id/tvTemperatura"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:background="@drawable/temperatura"
+                    android:fontFamily="@font/carter_one"
+                    android:paddingLeft="120dp"
                     android:paddingTop="30dp"
                     android:text="TextView"
+                    android:textColor="#EDF0ED"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/tvPresion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:background="@drawable/clima_nuves"
+                    android:fontFamily="@font/carter_one"
+                    android:paddingLeft="120dp"
+                    android:paddingTop="30dp"
+                    android:text="TextView"
+                    android:textColor="#EDF0ED"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/tvHumedad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:background="@drawable/humedad"
+                    android:fontFamily="@font/carter_one"
+                    android:paddingLeft="120dp"
+                    android:paddingTop="30dp"
+                    android:text="TextView"
+                    android:textColor="#EDF0ED"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/tvViento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:background="@drawable/viento"
+                    android:fontFamily="@font/carter_one"
+                    android:paddingLeft="120dp"
+                    android:paddingTop="30dp"
+                    android:text="TextView"
+                    android:textColor="#EDF0ED"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/tvLluvia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:background="@drawable/lluvia"
+                    android:fontFamily="@font/carter_one"
+                    android:paddingLeft="120dp"
+                    android:paddingTop="30dp"
+                    android:text="TextView"
+                    android:textColor="#EDF0ED"
                     android:textSize="40sp" />
 
             </LinearLayout>

@@ -1,47 +1,61 @@
 package cat.copernic.meteocleta;
 
-import android.support.annotation.NonNull;
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
-public class ReciclerViewAdapter extends RecyclerView.Adapter<ReciclerViewAdapter.ViewHolder> {
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView weather;
-        ImageView pictureWeather;
-        public ViewHolder(View itemView){
+public class ReciclerViewAdapter extends RecyclerView.Adapter<ReciclerViewAdapter.ClimaViewHolder> {
+
+    private Context context;
+    private List<clima> climaList;
+
+
+    public ReciclerViewAdapter(Context context, List<clima> climaList) {
+        this.context = context;
+        this.climaList = climaList;
+    }
+    class ClimaViewHolder extends RecyclerView.ViewHolder {
+        TextView tvTemperature, tvhumidity, tvPressure, tvWind, tvRain;
+
+        public ClimaViewHolder(View itemView) {
             super(itemView);
-            weather =(TextView)itemView.findViewById(R.id.tvTemperatura);
-            pictureWeather =(ImageView)itemView.findViewById(R.id.imgClima);
+            tvTemperature = itemView.findViewById(R.id.tvTemperatura);
+            tvhumidity = itemView.findViewById(R.id.tvHumedad);
+            tvPressure = itemView.findViewById(R.id.tvPresion);
+            tvWind = itemView.findViewById(R.id.tvViento);
+            tvRain = itemView.findViewById(R.id.tvLluvia);
         }
     }
-    public List<clima>weatherList;
-    public ReciclerViewAdapter(List<clima>weatherList){
-        this.weatherList = weatherList;
-    }
 
-    @NonNull
+
+
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_clima,parent,false);
-        ViewHolder viewHolder = new ViewHolder(view);
-        return viewHolder;
+    public ClimaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.layout_clima, null);
+        return new ClimaViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.weather.setText(weatherList.get(position).getTemperature());
-        holder.pictureWeather.setImageResource(weatherList.get(position).getPhotoWeather());
+    public void onBindViewHolder(ClimaViewHolder holder, int position) {
+        clima clima = climaList.get(position);
+        holder.tvTemperature.setText(String.valueOf(clima.getTemperatura())+ " Cº");
+        holder.tvWind.setText(String.valueOf(clima.getVelocitatVent())+ " km/h");
+        holder.tvPressure.setText(String.valueOf(clima.getPressioAtmosferica()) + " pA");
+        holder.tvhumidity.setText(String.valueOf(clima.getHumitat())+ " %");
+        holder.tvRain.setText("Now is " + clima.getPluja());
 
     }
 
     @Override
     public int getItemCount() {
-        return weatherList.size();
+        return climaList.size();
     }
+
+
 }
