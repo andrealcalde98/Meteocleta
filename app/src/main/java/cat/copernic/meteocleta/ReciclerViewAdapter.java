@@ -48,7 +48,7 @@ public class ReciclerViewAdapter extends RecyclerView.Adapter<ReciclerViewAdapte
         holder.tvWind.setText(String.valueOf(clima.getVelocitatVent())+ " km/h");
         holder.tvPressure.setText(String.valueOf(clima.getPressioAtmosferica()) + " pA");
         holder.tvhumidity.setText(String.valueOf(clima.getHumitat())+ " %");
-        holder.tvRain.setText("Now is " + clima.getPluja());
+        holder.tvRain.setText(clima.getPluja() + " now");
 
     }
 

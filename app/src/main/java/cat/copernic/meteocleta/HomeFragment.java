@@ -31,7 +31,7 @@ import java.util.List;
  */
 
 public class HomeFragment extends Fragment {
-    private static final String url_clima = "http://192.168.1.130/Myapp/MyApp.php";
+    private static final String url_clima = "http://192.168.12.190/Myapp/MyApp.php";
 
     List<clima>climaList;
     RecyclerView recyclerView;
